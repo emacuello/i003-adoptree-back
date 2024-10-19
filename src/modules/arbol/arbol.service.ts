@@ -22,19 +22,19 @@ export class ArbolService {
   }
 
   async findAll(filters?: ArbolFilterDto): Promise<Arbol[]> {
-    return this.arbolRepository.findAll(filters);
+    return await this.arbolRepository.findAll(filters);
   }
 
   async findOne(id: number): Promise<Arbol | null> {
-    return this.arbolRepository.findOne(id);
+    return await this.arbolRepository.findOne(id);
   }
 
   async update(id: number, updateArbolDto: UpdateArbolDto): Promise<Arbol> {
-    return this.arbolRepository.update(id, updateArbolDto);
+    return await this.arbolRepository.update(id, updateArbolDto);
   }
 
   async remove(id: number): Promise<Arbol> {
-    return this.arbolRepository.remove(id);
+    return await this.arbolRepository.remove(id);
   }
 
   async findStatusTreeById(
