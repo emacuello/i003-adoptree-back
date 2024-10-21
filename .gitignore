@@ -28,3 +28,4 @@ adoptree.key
 adoptree.key.pub
 .env.prod
 .env.dev
+ghsecrest.env

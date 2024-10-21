@@ -21,18 +21,18 @@ export class ArbolController {
   // Crear un nuevo árbol
   @Post("create")
   async createArbol(@Body() createArbolDto: CreateArbolDto): Promise<Arbol> {
-    return this.arbolService.createArbol(createArbolDto);
+    return await this.arbolService.createArbol(createArbolDto);
   }
 
   // Obtener todos los árboles
   @Get()
   async findAll(@Query() filter?: ArbolFilterDto): Promise<Arbol[]> {
-    return this.arbolService.findAll(filter);
+    return await this.arbolService.findAll(filter);
   }
 
   @Get(":id")
   async findOne(@Param("id") id: string): Promise<Arbol | null> {
-    return this.arbolService.findOne(Number(id));
+    return await this.arbolService.findOne(Number(id));
   }
 
   // Actualizar un árbol específico
@@ -41,13 +41,13 @@ export class ArbolController {
     @Param("id") id: number,
     @Body() updateArbolDto: UpdateArbolDto,
   ): Promise<Arbol> {
-    return this.arbolService.update(Number(id), updateArbolDto);
+    return await this.arbolService.update(Number(id), updateArbolDto);
   }
 
   // Eliminar un árbol específico
   @Delete(":id")
   async remove(@Param("id") id: number): Promise<Arbol> {
-    return this.arbolService.remove(Number(id));
+    return await this.arbolService.remove(Number(id));
   }
 
   //Obtener estado de un arbol por id
@@ -55,6 +55,6 @@ export class ArbolController {
   async findStatusTreeById(
     @Param("id") id: string,
   ): Promise<{ id: number; statusTree: string; images: string[] } | null> {
-    return this.arbolService.findStatusTreeById(Number(id));
+    return await this.arbolService.findStatusTreeById(Number(id));
   }
 }

@@ -56,11 +56,11 @@ export class FincaService {
       throw new NotFoundException(`Finca with ID ${id} not found`);
     }
 
-    return this.fincaRepository.deleteFinca(id);
+    return await this.fincaRepository.deleteFinca(id);
   }
 
   async getAllFincas() {
-    return this.fincaRepository.findAllFincas();
+    return await this.fincaRepository.findAllFincas();
   }
 
   async getFincaDetails(id: number) {

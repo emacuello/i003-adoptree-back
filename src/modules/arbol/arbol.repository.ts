@@ -83,8 +83,8 @@ export class ArbolRepository {
     },
   };
 
-  create(input: ArbolCreateRepoInput): Promise<ArbolRepo> {
-    return this.prisma.arbol.create({
+  async create(input: ArbolCreateRepoInput): Promise<ArbolRepo> {
+    return await this.prisma.arbol.create({
       include: this.commonIncludes,
       data: {
         finca: { connect: { id: input.fincaId } },
@@ -96,11 +96,11 @@ export class ArbolRepository {
     });
   }
 
-  findAll(filters?: ArbolFilterRepoInput): Promise<ArbolRepo[]> {
+  async findAll(filters?: ArbolFilterRepoInput): Promise<ArbolRepo[]> {
     // Desestructuramos los filtros opcionales del parámetro `filters` si es proporcionado
     const { fincaId, active, search } = filters || {};
 
-    return this.prisma.arbol.findMany({
+    return await this.prisma.arbol.findMany({
       // Incluimos relaciones adicionales para obtener detalles sobre el usuario y la cosecha asociada a cada árbol
       include: this.commonIncludes,
       where: {
@@ -131,7 +131,7 @@ export class ArbolRepository {
   }
 
   async findOne(id: number): Promise<ArbolRepo | null> {
-    return this.prisma.arbol.findUnique({
+    return await this.prisma.arbol.findUnique({
       include: this.commonIncludes,
       where: {
         id: id, // Asegúrate de que `id` sea un número
@@ -139,8 +139,8 @@ export class ArbolRepository {
     });
   }
 
-  update(id: number, input: ArbolUpdateRepoInput): Promise<ArbolRepo> {
-    return this.prisma.arbol.update({
+  async update(id: number, input: ArbolUpdateRepoInput): Promise<ArbolRepo> {
+    return await this.prisma.arbol.update({
       include: this.commonIncludes,
       where: { id: id },
       data: {
@@ -154,14 +154,14 @@ export class ArbolRepository {
     });
   }
 
-  remove(id: number): Promise<Arbol> {
-    return this.prisma.arbol.delete({ where: { id: id } });
+  async remove(id: number): Promise<Arbol> {
+    return await this.prisma.arbol.delete({ where: { id: id } });
   }
 
-  findStatusTreeById(
+  async findStatusTreeById(
     id: number,
   ): Promise<{ id: number; statusTree: string; images: string[] } | null> {
-    return this.prisma.arbol.findUnique({
+    return await this.prisma.arbol.findUnique({
       where: {
         id: id,
       },

@@ -24,12 +24,12 @@ export class FincaController {
 
   @Get()
   async getAllFincas(): Promise<Finca[]> {
-    return this.fincaService.getAllFincas();
+    return await this.fincaService.getAllFincas();
   }
 
   @Get(":id")
   async getFincaDetails(@Param("id") id: number): Promise<Finca> {
-    return this.fincaService.getFincaDetails(Number(id));
+    return await this.fincaService.getFincaDetails(Number(id));
   }
 
   @Put(":id")
@@ -37,11 +37,11 @@ export class FincaController {
     @Param("id") id: number,
     @Body() updateFincaDto: UpdateFincaDto,
   ): Promise<Finca> {
-    return this.fincaService.updateFinca(Number(id), updateFincaDto);
+    return await this.fincaService.updateFinca(Number(id), updateFincaDto);
   }
 
   @Delete(":id")
   async deleteFinca(@Param("id") id: number): Promise<Finca> {
-    return this.fincaService.deleteFinca(Number(id));
+    return await this.fincaService.deleteFinca(Number(id));
   }
 }

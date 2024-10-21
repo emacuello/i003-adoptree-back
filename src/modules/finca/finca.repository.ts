@@ -62,7 +62,7 @@ export class FincaRepository {
   private static readonly commonIncludes = commonIncludes;
 
   async createFinca(input: FincaCreateRepoInput): Promise<FincaRepo> {
-    return this.prisma.finca.create({
+    return await this.prisma.finca.create({
       include: FincaRepository.commonIncludes,
       data: {
         name: input.name,
@@ -102,7 +102,7 @@ export class FincaRepository {
       }
     }
 
-    return this.prisma.finca.update({
+    return await this.prisma.finca.update({
       include: FincaRepository.commonIncludes,
       where: { id },
       data: {
@@ -113,20 +113,20 @@ export class FincaRepository {
   }
 
   async findFincaById(id: number): Promise<FincaRepo | null> {
-    return this.prisma.finca.findUnique({
+    return await this.prisma.finca.findUnique({
       where: { id },
       include: FincaRepository.commonIncludes,
     });
   }
 
   async findAllFincas(): Promise<FincaRepo[]> {
-    return this.prisma.finca.findMany({
+    return await this.prisma.finca.findMany({
       include: FincaRepository.commonIncludes,
     });
   }
 
   async deleteFinca(id: number): Promise<FincaRepo> {
-    return this.prisma.finca.delete({
+    return await this.prisma.finca.delete({
       where: { id },
       include: FincaRepository.commonIncludes,
     });
