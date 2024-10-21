@@ -9,6 +9,17 @@ services:
         volumes:
           - ./data:/data
           - ./letsencrypt:/etc/letsencrypt
+        environment:
+          # These are the settings to access your db
+          DB_MYSQL_HOST: ${DB_MYSQL_HOST}
+          DB_MYSQL_PORT: ${DB_MYSQL_PORT}
+          DB_MYSQL_USER: ${DB_MYSQL_USER}
+          DB_MYSQL_PASSWORD: ${DB_MYSQL_PASSWORD} 
+          #DB_MYSQL_PASSWORD__FILE: /run/secrets/MYSQL_PWD
+          DB_MYSQL_NAME: ${DB_MYSQL_NAME}
+          # If you would rather use Sqlite, remove all DB_MYSQL_* lines above
+          # Uncomment this if IPv6 is not enabled on your host
+          # DISABLE_IPV6: 'true'
         networks:
           - adoptree
 
