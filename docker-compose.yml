@@ -9,56 +9,47 @@ services:
         volumes:
           - ./data:/data
           - ./letsencrypt:/etc/letsencrypt
-        environment:
-          # These are the settings to access your db
-          DB_MYSQL_HOST: ${DB_MYSQL_HOST}
-          DB_MYSQL_PORT: ${DB_MYSQL_PORT}
-          DB_MYSQL_USER: ${DB_MYSQL_USER}
-          DB_MYSQL_PASSWORD: ${DB_MYSQL_PASSWORD} 
-          #DB_MYSQL_PASSWORD__FILE: /run/secrets/MYSQL_PWD
-          DB_MYSQL_NAME: ${DB_MYSQL_NAME}
-          # If you would rather use Sqlite, remove all DB_MYSQL_* lines above
-          # Uncomment this if IPv6 is not enabled on your host
-          # DISABLE_IPV6: 'true'
         networks:
           - adoptree
 
-    prometheus:
-        image: prom/prometheus:latest
-        restart: unless-stopped
-        volumes:
-          - ./prometheus.yml:/etc/prometheus/prometheus.yml
-          - prometheus-data:/prometheus
-        depends_on:
-          - adoptree-api
-        networks:
-          - adoptree
-        expose:
-          - "9090"
+    #Se migran a otro servidor
+    # prometheus:
+    #     image: prom/prometheus:latest
+    #     restart: unless-stopped
+    #     volumes:
+    #       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+    #       - prometheus-data:/prometheus
+    #     depends_on:
+    #       - adoptree-api
+    #     networks:
+    #       - adoptree
+    #     expose:
+    #       - "9090"
 
-    grafana:
-        image: grafana/grafana:latest
-        restart: unless-stopped
-        volumes:      
-          - grafana-data:/var/lib/grafana
-          - ./grafana.ini:/etc/grafana/grafana.ini
-        networks:
-          - adoptree
-        expose:
-          - "3000"
+    # grafana:
+    #     image: grafana/grafana:latest
+    #     restart: unless-stopped
+    #     volumes:      
+    #       - grafana-data:/var/lib/grafana
+    #       - ./grafana.ini:/etc/grafana/grafana.ini
+    #     networks:
+    #       - adoptree
+    #     expose:
+    #       - "3000"
 
-    loki:
-        image: grafana/loki:2.9.2
-        restart: unless-stopped
-        expose:
-          - "3100"
-        volumes:
-          - ./loki-config.yml:/etc/loki/config.yaml
-        depends_on:
-          - adoptree-api
-        networks:
-          - adoptree
-
+    #Se migran a otro servidor
+    # loki:
+    #     image: grafana/loki:2.9.2
+    #     restart: unless-stopped
+    #     expose:
+    #       - "3100"
+    #     volumes:
+    #       - ./loki-config.yml:/etc/loki/config.yaml
+    #     depends_on:
+    #       - adoptree-api
+    #     networks:
+    #       - adoptree
+    #Enviar las metricas a Loki desde sus servidor
     promtail:
         image: grafana/promtail:2.7.1
         restart: unless-stopped
@@ -66,8 +57,6 @@ services:
           - /var/log:/var/log
           - /var/run/docker.sock:/var/run/docker.sock
           - ./promtail-config.yml:/etc/promtail/config.yml
-        depends_on:
-          - loki
         networks:
           - adoptree
 
@@ -112,6 +101,3 @@ services:
 networks:
     adoptree:
         driver: bridge
-volumes:
-    prometheus-data:
-    grafana-data:
