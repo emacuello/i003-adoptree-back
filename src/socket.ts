@@ -5,7 +5,8 @@ import { Server as HttpServer } from "http";
 export const initializeSocket = (httpServer: HttpServer) => {
   const io = new Server(httpServer, {
     cors: {
-      origin: process.env.FRONT_URL, // Ajusta la URL a la del frontend
+      // FRONT_URL admite varios orígenes separados por coma (dominio propio y *.vercel.app).
+      origin: (process.env.FRONT_URL ?? "").split(",").map((url) => url.trim()),
       methods: ["GET", "POST"],
       credentials: true,
     },

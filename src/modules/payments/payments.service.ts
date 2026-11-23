@@ -24,6 +24,8 @@ export class PaymentsService {
     // this.payment.create({body}).then(console.log).catch(console.log)
 
     try {
+      // FRONT_URL puede traer varios orígenes separados por coma: se vuelve al primero.
+      const frontUrl = (process.env.FRONT_URL ?? "").split(",")[0].trim();
       const body = {
         items: [
           {
@@ -36,9 +38,9 @@ export class PaymentsService {
           },
         ],
         back_urls: {
-          success: process.env.FRONT_URL,
-          failure: process.env.FRONT_URL,
-          pending: process.env.FRONT_URL,
+          success: frontUrl,
+          failure: frontUrl,
+          pending: frontUrl,
         },
         notification_url: process.env.MP_WEBHOOK,
         auto_return: "approved",

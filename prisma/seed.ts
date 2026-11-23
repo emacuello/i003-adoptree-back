@@ -59,7 +59,7 @@ async function main() {
         name: 'Finca El Paraíso',
         ubication: 'Mendoza, Argentina',
         practicesSustainable: 'Uso de compostaje y control biológico de plagas',
-        images: ["https://sevilla.abc.es/agronoma/wp-content/uploads/sites/13/2020/09/Finca-El-Cerro-1.jpg", "https://efeagro.com/wp-content/uploads/2016/07/foto-limones.jpg"],
+        images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Citrus_orchard_-_Turun%C3%A7gil_bah%C3%A7esi.jpg/1280px-Citrus_orchard_-_Turun%C3%A7gil_bah%C3%A7esi.jpg", "https://efeagro.com/wp-content/uploads/2016/07/foto-limones.jpg"],
         productor: {
           create: {
             nombre: "Juan",
@@ -79,7 +79,7 @@ async function main() {
         name: 'Hacienda La Esperanza',
         ubication: 'Tucumán, Argentina',
         practicesSustainable: 'Sistemas de riego por goteo y energía solar',
-        images: ["https://content.cuerpomente.com/medio/2023/02/02/naranja-salvaje-un-proyecto-con-la-colaboracion-de-wwf_c3bb7f3b_1280x720.jpg", "https://predios.com.co/wp-content/uploads/2021/07/DJI_0208-scaled.jpg"],
+        images: ["https://content.cuerpomente.com/medio/2023/02/02/naranja-salvaje-un-proyecto-con-la-colaboracion-de-wwf_c3bb7f3b_1280x720.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Lemon-argentina.gob.ar.jpg/1280px-Lemon-argentina.gob.ar.jpg"],
         productor: {
           create: {
             nombre: "Clara",
@@ -99,7 +99,7 @@ async function main() {
         name: 'Citrícola San Juan',
         ubication: 'San Juan, Argentina',
         practicesSustainable: 'Manejo integrado de plagas y uso eficiente del agua',
-        images: ["https://example.com/sanjuan1.jpg", "https://example.com/sanjuan2.jpg"],
+        images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Lemon_Orchard_in_the_Galilee_by_David_Shankbone.jpg/1280px-Lemon_Orchard_in_the_Galilee_by_David_Shankbone.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Orange_orchard_haripur.jpg/1280px-Orange_orchard_haripur.jpg"],
         productor: {
           create: {
             nombre: "Miguel",
@@ -119,7 +119,7 @@ async function main() {
         name: 'Finca Los Naranjos',
         ubication: 'Entre Ríos, Argentina',
         practicesSustainable: 'Agricultura regenerativa y biodiversidad',
-        images: ["https://example.com/entrerios1.jpg", "https://example.com/entrerios2.jpg"],
+        images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Naranjal_de_Pereda%2C_Concordia_01.jpg/1280px-Naranjal_de_Pereda%2C_Concordia_01.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Naranjal_de_Pereda%2C_Concordia_03.jpg/1280px-Naranjal_de_Pereda%2C_Concordia_03.jpg"],
         productor: {
           create: {
             nombre: "Laura",
@@ -139,7 +139,7 @@ async function main() {
         name: 'Citrus Valley',
         ubication: 'Jujuy, Argentina',
         practicesSustainable: 'Conservación de suelos y polinizadores',
-        images: ["https://example.com/jujuy1.jpg", "https://example.com/jujuy2.jpg"],
+        images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Naranjal_de_Pereda%2C_Concordia_05.jpg/1280px-Naranjal_de_Pereda%2C_Concordia_05.jpg", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Darjeeling_Dabapani_Orange_Orchard.jpg/1280px-Darjeeling_Dabapani_Orange_Orchard.jpg"],
         productor: {
           create: {
             nombre: "Carlos",
@@ -171,17 +171,17 @@ async function main() {
     },
     {
       name: "Limonero",
-      images: ["https://example.com/limonero1.jpg", "https://example.com/limonero2.jpg"],
+      images: ["https://media.revistaad.es/photos/60c7427b286f642f6de5ca20/master/w_1600%2Cc_limit/200724.jpg", "https://img.grouponcdn.com/deal/3SmThcN9ENiRbezD5G3SN4v8YETT/3S-1371x823/v1/t600x362.jpg"],
       price: "6000"
     },
     {
       name: "Pomelo",
-      images: ["https://example.com/pomelo1.jpg", "https://example.com/pomelo2.jpg"],
+      images: ["https://www.rionegro.com.ar/wp-content/uploads/2023/04/thumbnail_POMELOS-PLANTA-Y-FRUTO.jpg?w=1200&h=630&crop=1", "https://http2.mlstatic.com/D_NQ_NP_710496-MLA43965338235_112020-O.webp"],
       price: "5500"
     },
     {
       name: "Lima",
-      images: ["https://example.com/lima1.jpg", "https://example.com/lima2.jpg"],
+      images: ["https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Lime_tree_fruits.JPG/1280px-Lime_tree_fruits.JPG", "https://http2.mlstatic.com/D_NQ_NP_776747-MLA48056536080_102021-O.webp"],
       price: "4800"
     }
   ]

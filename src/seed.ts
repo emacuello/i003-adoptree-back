@@ -78,7 +78,7 @@ export async function seederOnDb() {
         ubication: "Mendoza, Argentina",
         practicesSustainable: "Uso de compostaje y control biológico de plagas",
         images: [
-          "https://sevilla.abc.es/agronoma/wp-content/uploads/sites/13/2020/09/Finca-El-Cerro-1.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Citrus_orchard_-_Turun%C3%A7gil_bah%C3%A7esi.jpg/1280px-Citrus_orchard_-_Turun%C3%A7gil_bah%C3%A7esi.jpg",
           "https://efeagro.com/wp-content/uploads/2016/07/foto-limones.jpg",
         ],
         productor: {
@@ -102,7 +102,7 @@ export async function seederOnDb() {
         practicesSustainable: "Sistemas de riego por goteo y energía solar",
         images: [
           "https://content.cuerpomente.com/medio/2023/02/02/naranja-salvaje-un-proyecto-con-la-colaboracion-de-wwf_c3bb7f3b_1280x720.jpg",
-          "https://predios.com.co/wp-content/uploads/2021/07/DJI_0208-scaled.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Lemon-argentina.gob.ar.jpg/1280px-Lemon-argentina.gob.ar.jpg",
         ],
         productor: {
           create: {
@@ -125,8 +125,8 @@ export async function seederOnDb() {
         practicesSustainable:
           "Manejo integrado de plagas y uso eficiente del agua",
         images: [
-          "https://example.com/sanjuan1.jpg",
-          "https://example.com/sanjuan2.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Lemon_Orchard_in_the_Galilee_by_David_Shankbone.jpg/1280px-Lemon_Orchard_in_the_Galilee_by_David_Shankbone.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Orange_orchard_haripur.jpg/1280px-Orange_orchard_haripur.jpg",
         ],
         productor: {
           create: {
@@ -148,8 +148,8 @@ export async function seederOnDb() {
         ubication: "Entre Ríos, Argentina",
         practicesSustainable: "Agricultura regenerativa y biodiversidad",
         images: [
-          "https://example.com/entrerios1.jpg",
-          "https://example.com/entrerios2.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Naranjal_de_Pereda%2C_Concordia_01.jpg/1280px-Naranjal_de_Pereda%2C_Concordia_01.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Naranjal_de_Pereda%2C_Concordia_03.jpg/1280px-Naranjal_de_Pereda%2C_Concordia_03.jpg",
         ],
         productor: {
           create: {
@@ -171,8 +171,8 @@ export async function seederOnDb() {
         ubication: "Jujuy, Argentina",
         practicesSustainable: "Conservación de suelos y polinizadores",
         images: [
-          "https://example.com/jujuy1.jpg",
-          "https://example.com/jujuy2.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Naranjal_de_Pereda%2C_Concordia_05.jpg/1280px-Naranjal_de_Pereda%2C_Concordia_05.jpg",
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Darjeeling_Dabapani_Orange_Orchard.jpg/1280px-Darjeeling_Dabapani_Orange_Orchard.jpg",
         ],
         productor: {
           create: {
@@ -229,7 +229,7 @@ export async function seederOnDb() {
     {
       name: "Lima",
       images: [
-        "https://t1.uc.ltmcdn.com/es/posts/6/9/7/como_cuidar_un_arbol_de_lima_30796_orig.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Lime_tree_fruits.JPG/1280px-Lime_tree_fruits.JPG",
         "https://http2.mlstatic.com/D_NQ_NP_776747-MLA48056536080_102021-O.webp",
       ],
       price: "4800",
