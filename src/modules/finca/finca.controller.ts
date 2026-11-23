@@ -8,9 +8,9 @@ import {
   Put,
 } from "@nestjs/common";
 import { Finca } from "@prisma/client";
-import { CreateFincaDto } from "./dto/create-finca.dto";
-import { UpdateFincaDto } from "./dto/update-finca.dto";
-import { FincaService } from "./finca.service";
+import { CreateFincaDto } from "./dto/create-finca.dto.js";
+import { UpdateFincaDto } from "./dto/update-finca.dto.js";
+import { FincaService } from "./finca.service.js";
 
 @Controller("fincas")
 export class FincaController {
@@ -24,12 +24,12 @@ export class FincaController {
 
   @Get()
   async getAllFincas(): Promise<Finca[]> {
-    return this.fincaService.getAllFincas();
+    return await this.fincaService.getAllFincas();
   }
 
   @Get(":id")
   async getFincaDetails(@Param("id") id: number): Promise<Finca> {
-    return this.fincaService.getFincaDetails(Number(id));
+    return await this.fincaService.getFincaDetails(Number(id));
   }
 
   @Put(":id")
@@ -37,11 +37,11 @@ export class FincaController {
     @Param("id") id: number,
     @Body() updateFincaDto: UpdateFincaDto,
   ): Promise<Finca> {
-    return this.fincaService.updateFinca(Number(id), updateFincaDto);
+    return await this.fincaService.updateFinca(Number(id), updateFincaDto);
   }
 
   @Delete(":id")
   async deleteFinca(@Param("id") id: number): Promise<Finca> {
-    return this.fincaService.deleteFinca(Number(id));
+    return await this.fincaService.deleteFinca(Number(id));
   }
 }

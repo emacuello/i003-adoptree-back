@@ -1,11 +1,11 @@
 import { Inject, Injectable, Logger } from "@nestjs/common";
-import { ConfigType } from "@nestjs/config";
+import type { ConfigType } from "@nestjs/config";
 import { PassportStrategy } from "@nestjs/passport";
 import { RoleEnum } from "@prisma/client";
 import { Request } from "express";
 import { Profile, Strategy } from "passport-google-oauth20";
-import { UsersService } from "../../users/users.service";
-import { AuthConfig } from "../auth.config";
+import { UsersService } from "../../users/users.service.js";
+import { AuthConfig } from "../auth.config.js";
 
 @Injectable()
 export class GoogleStrategy extends PassportStrategy(Strategy, "google") {

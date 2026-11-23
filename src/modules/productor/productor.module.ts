@@ -1,5 +1,5 @@
 import { Module } from "@nestjs/common";
-import { ProductorRepository } from "./productor.repository";
+import { ProductorRepository } from "./productor.repository.js";
 
 @Module({
   providers: [ProductorRepository],

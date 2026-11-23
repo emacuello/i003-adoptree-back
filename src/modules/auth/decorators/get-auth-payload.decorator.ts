@@ -1,7 +1,6 @@
 import { createParamDecorator, ExecutionContext } from "@nestjs/common";
-import { get as _get } from "lodash";
-import { getReqResFromCtx } from "../../../utils";
-import { AuthPayloadDTO } from "../dto/auth-payload.dto";
+import { getReqResFromCtx } from "../../../utils/index.js";
+import { AuthPayloadDTO } from "../dto/auth-payload.dto.js";
 
 type DotPrefix<T extends string> = T extends "" ? "" : `.${T}`;
 
@@ -28,6 +27,8 @@ export const GetAuthPayload = createParamDecorator(
 
     const authUser: AuthPayloadDTO = req.user;
 
-    return authUserKey ? _get(authUser, authUserKey) : authUser;
+    return authUserKey
+      ? authUserKey.split(".").reduce((value, key) => value?.[key], authUser)
+      : authUser;
   },
 );

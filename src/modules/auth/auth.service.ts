@@ -1,13 +1,13 @@
 import { BadRequestException, Injectable } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { User } from "@prisma/client";
-import { ERROR_KEYS } from "../../constants";
-import { UsersService } from "../users/users.service";
-import { AuthPayloadDTO, LoginResponse } from "./dto/auth-payload.dto";
-import { LoginDto } from "./dto/login.dto";
-import { RegisterDto } from "./dto/register.dto";
-import { UpdateUserDto } from "./dto/update-profile.dto";
-import { PasswordService } from "./password.service";
+import { ERROR_KEYS } from "../../constants/index.js";
+import { UsersService } from "../users/users.service.js";
+import { AuthPayloadDTO, LoginResponse } from "./dto/auth-payload.dto.js";
+import { LoginDto } from "./dto/login.dto.js";
+import { RegisterDto } from "./dto/register.dto.js";
+import { UpdateUserDto } from "./dto/update-profile.dto.js";
+import { PasswordService } from "./password.service.js";
 
 const DUPLICATE_ERROR_CODE = "P2002";
 

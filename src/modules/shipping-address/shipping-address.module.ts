@@ -1,7 +1,7 @@
 import { Module } from "@nestjs/common";
-import { ShippingAddressController } from "./shipping-address.controller";
-import { ShippingAddressService } from "./shipping-address.service";
-import { ShippingAddressRepository } from "./shipping-address.repository";
+import { ShippingAddressController } from "./shipping-address.controller.js";
+import { ShippingAddressService } from "./shipping-address.service.js";
+import { ShippingAddressRepository } from "./shipping-address.repository.js";
 
 @Module({
   controllers: [ShippingAddressController],

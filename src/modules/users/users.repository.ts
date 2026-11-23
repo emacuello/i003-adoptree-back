@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { Adoption, Prisma, User } from "@prisma/client"; // Importa los tipos necesarios de Prisma
-import { PrismaService } from "nestjs-prisma"; // Asegúrate de que PrismaService esté bien importado
+import { PrismaService } from "../../prisma.service.js"; // Asegúrate de que PrismaService esté bien importado
 
 export interface UpdateUserInput {
   name?: string;

@@ -5,7 +5,7 @@ import {
   UnauthorizedException,
 } from "@nestjs/common";
 import { OAuth2Client } from "google-auth-library";
-import { UsersService } from "../users/users.service";
+import { UsersService } from "../users/users.service.js";
 
 // Definición de la interfaz para la configuración de autenticación
 interface AuthConfig {

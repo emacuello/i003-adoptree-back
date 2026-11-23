@@ -1,6 +1,6 @@
 import { Body, Controller, Get, Post, Req } from "@nestjs/common";
-import { PaymentsService } from "./payments.service";
-import { CreatePreferenceDto } from "./dto/create-preference.dto";
+import { PaymentsService } from "./payments.service.js";
+import { CreatePreferenceDto } from "./dto/create-preference.dto.js";
 
 @Controller("payments")
 export class PaymentsController {

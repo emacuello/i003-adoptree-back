@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
-import { CreateFincaDto } from "./dto/create-finca.dto";
-import { UpdateFincaDto } from "./dto/update-finca.dto";
-import { FincaRepository } from "./finca.repository";
-import { ProductorRepository } from "../productor/productor.repository";
+import { CreateFincaDto } from "./dto/create-finca.dto.js";
+import { UpdateFincaDto } from "./dto/update-finca.dto.js";
+import { FincaRepository } from "./finca.repository.js";
+import { ProductorRepository } from "../productor/productor.repository.js";
 
 @Injectable()
 export class FincaService {
@@ -56,11 +56,11 @@ export class FincaService {
       throw new NotFoundException(`Finca with ID ${id} not found`);
     }
 
-    return this.fincaRepository.deleteFinca(id);
+    return await this.fincaRepository.deleteFinca(id);
   }
 
   async getAllFincas() {
-    return this.fincaRepository.findAllFincas();
+    return await this.fincaRepository.findAllFincas();
   }
 
   async getFincaDetails(id: number) {

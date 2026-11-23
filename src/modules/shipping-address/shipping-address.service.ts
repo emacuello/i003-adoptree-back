@@ -2,10 +2,10 @@
 // src/shipping-address/shipping-address.service.ts
 import { Injectable } from "@nestjs/common";
 import { ShippingAddress } from "@prisma/client";
-import { ShippingAddressRepository } from "./shipping-address.repository";
+import { ShippingAddressRepository } from "./shipping-address.repository.js";
 // import { CreateShippingAddressDto } from './dto/create-shipping-address.dto';
 // import { UpdateShippingAddressDto } from './dto/update-shipping-address.dto';
-// import { ERROR_KEYS } from '../../constants';
+// import { ERROR_KEYS } from '../../constants/index.js';
 
 @Injectable()
 export class ShippingAddressService {

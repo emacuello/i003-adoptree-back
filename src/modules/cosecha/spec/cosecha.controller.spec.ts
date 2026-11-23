@@ -1,10 +1,10 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { Cosecha, EstadoDeEnvioEnum } from "@prisma/client";
-import { CosechaController } from "../cosecha.controller";
-import { CosechaService } from "../cosecha.service";
-import { CreateCosechaDto } from "../dto/create-cosecha.dto";
-import { FilterCosechaDto } from "../dto/filter-cosecha.dto";
-import { UpdateCosechaDto } from "../dto/update-cosecha.dto";
+import { CosechaController } from "../cosecha.controller.js";
+import { CosechaService } from "../cosecha.service.js";
+import { CreateCosechaDto } from "../dto/create-cosecha.dto.js";
+import { FilterCosechaDto } from "../dto/filter-cosecha.dto.js";
+import { UpdateCosechaDto } from "../dto/update-cosecha.dto.js";
 
 describe("CosechaController", () => {
   let cosechaController: CosechaController;

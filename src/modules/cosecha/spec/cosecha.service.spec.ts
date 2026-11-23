@@ -1,9 +1,9 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { Cosecha } from "@prisma/client";
-import { CosechaRepository } from "../cosecha.repository";
-import { CosechaService } from "../cosecha.service";
-import { CreateCosechaDto } from "../dto/create-cosecha.dto";
-import { UpdateCosechaDto } from "../dto/update-cosecha.dto";
+import { CosechaRepository } from "../cosecha.repository.js";
+import { CosechaService } from "../cosecha.service.js";
+import { CreateCosechaDto } from "../dto/create-cosecha.dto.js";
+import { UpdateCosechaDto } from "../dto/update-cosecha.dto.js";
 
 describe("CosechaService", () => {
   let cosechaService: CosechaService;

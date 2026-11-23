@@ -6,9 +6,10 @@ import {
   Logger,
 } from "@nestjs/common";
 import { User } from "@prisma/client";
-import * as bcrypt from "bcryptjs"; // Cambiado a 'bcrypt' por convención
-import { ERROR_KEYS } from "../../constants";
-import { UsersService } from "../users/users.service";
+import bcrypt from "bcryptjs";
+import { ERROR_KEYS } from "../../constants/index.js";
+import { UsersService } from "../users/users.service.js";
+import type { WrapperType } from "../../utils/index.js";
 
 @Injectable()
 export class PasswordService {
@@ -16,7 +17,7 @@ export class PasswordService {
 
   constructor(
     @Inject(forwardRef(() => UsersService))
-    private readonly userService: UsersService,
+    private readonly userService: WrapperType<UsersService>,
   ) {}
 
   async validateOrThrowException(

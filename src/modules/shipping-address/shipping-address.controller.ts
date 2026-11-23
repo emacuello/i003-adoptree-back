@@ -9,7 +9,7 @@ import {
   Put,
   Delete,
 } from "@nestjs/common";
-import { ShippingAddressService } from "./shipping-address.service";
+import { ShippingAddressService } from "./shipping-address.service.js";
 
 @Controller("shipping-addresses")
 export class ShippingAddressController {

@@ -1,8 +1,8 @@
 import { Module } from "@nestjs/common";
-import { PrismaService } from "nestjs-prisma";
-import { ArbolController } from "./arbol.controller";
-import { ArbolRepository } from "./arbol.repository";
-import { ArbolService } from "./arbol.service";
+import { PrismaService } from "../../prisma.service.js";
+import { ArbolController } from "./arbol.controller.js";
+import { ArbolRepository } from "./arbol.repository.js";
+import { ArbolService } from "./arbol.service.js";
 
 @Module({
   providers: [ArbolService, ArbolRepository, PrismaService],

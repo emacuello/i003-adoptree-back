@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { Adoption } from "@prisma/client"; // Importa los tipos de Prisma para usar en los DTO si es necesario
-import { PrismaService } from "nestjs-prisma"; // Usar el PrismaService de nestjs-prisma
+import { PrismaService } from "../../prisma.service.js"; // Usar el PrismaService de nestjs-prisma
 
 @Injectable()
 export class AdoptionService {

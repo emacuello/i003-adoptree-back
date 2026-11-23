@@ -1,10 +1,10 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { Arbol } from "@prisma/client";
-import { ERROR_KEYS } from "../../constants";
-import { ArbolRepository } from "./arbol.repository";
-import { CreateArbolDto } from "./dto/create-arbol.dto";
-import { ArbolFilterDto } from "./dto/filter-arbol.dto";
-import { UpdateArbolDto } from "./dto/update-arbol";
+import { ERROR_KEYS } from "../../constants/index.js";
+import { ArbolRepository } from "./arbol.repository.js";
+import { CreateArbolDto } from "./dto/create-arbol.dto.js";
+import { ArbolFilterDto } from "./dto/filter-arbol.dto.js";
+import { UpdateArbolDto } from "./dto/update-arbol.js";
 
 @Injectable()
 export class ArbolService {
@@ -22,19 +22,19 @@ export class ArbolService {
   }
 
   async findAll(filters?: ArbolFilterDto): Promise<Arbol[]> {
-    return this.arbolRepository.findAll(filters);
+    return await this.arbolRepository.findAll(filters);
   }
 
   async findOne(id: number): Promise<Arbol | null> {
-    return this.arbolRepository.findOne(id);
+    return await this.arbolRepository.findOne(id);
   }
 
   async update(id: number, updateArbolDto: UpdateArbolDto): Promise<Arbol> {
-    return this.arbolRepository.update(id, updateArbolDto);
+    return await this.arbolRepository.update(id, updateArbolDto);
   }
 
   async remove(id: number): Promise<Arbol> {
-    return this.arbolRepository.remove(id);
+    return await this.arbolRepository.remove(id);
   }
 
   async findStatusTreeById(

@@ -1,13 +1,13 @@
 import { BadRequestException } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { Test, TestingModule } from "@nestjs/testing";
-import { ERROR_KEYS } from "../../../constants";
-import { UsersService } from "../../users/users.service";
-import { AuthService } from "../auth.service";
-import { LoginDto } from "../dto/login.dto";
-import { RegisterDto } from "../dto/register.dto";
-import { UpdateUserDto } from "../dto/update-profile.dto";
-import { PasswordService } from "../password.service";
+import { ERROR_KEYS } from "../../../constants/index.js";
+import { UsersService } from "../../users/users.service.js";
+import { AuthService } from "../auth.service.js";
+import { LoginDto } from "../dto/login.dto.js";
+import { RegisterDto } from "../dto/register.dto.js";
+import { UpdateUserDto } from "../dto/update-profile.dto.js";
+import { PasswordService } from "../password.service.js";
 
 describe("AuthService", () => {
   let authService: AuthService;

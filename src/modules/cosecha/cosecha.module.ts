@@ -1,9 +1,9 @@
 import { Module } from "@nestjs/common";
-import { PrismaService } from "nestjs-prisma";
-import { ArbolModule } from "../arbol/arbol.module";
-import { CosechaController } from "./cosecha.controller";
-import { CosechaRepository } from "./cosecha.repository";
-import { CosechaService } from "./cosecha.service";
+import { PrismaService } from "../../prisma.service.js";
+import { ArbolModule } from "../arbol/arbol.module.js";
+import { CosechaController } from "./cosecha.controller.js";
+import { CosechaRepository } from "./cosecha.repository.js";
+import { CosechaService } from "./cosecha.service.js";
 
 @Module({
   imports: [ArbolModule],

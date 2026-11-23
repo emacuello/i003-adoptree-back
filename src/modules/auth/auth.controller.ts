@@ -6,11 +6,11 @@ import {
   UnauthorizedException,
 } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
-import { AuthService } from "./auth.service";
-import { GetAuthPayload, IsPublicResource } from "./decorators";
-import { LoginDto } from "./dto/login.dto";
-import { RegisterDto } from "./dto/register.dto";
-import { GoogleAuthService } from "./google-auth.service";
+import { AuthService } from "./auth.service.js";
+import { GetAuthPayload, IsPublicResource } from "./decorators/index.js";
+import { LoginDto } from "./dto/login.dto.js";
+import { RegisterDto } from "./dto/register.dto.js";
+import { GoogleAuthService } from "./google-auth.service.js";
 
 @Controller("auth")
 export class AuthController {

@@ -1,9 +1,9 @@
 import { Injectable } from "@nestjs/common";
 import { Cosecha } from "@prisma/client";
-import { CosechaRepository } from "./cosecha.repository";
-import { CreateCosechaDto } from "./dto/create-cosecha.dto";
-import { FilterCosechaDto } from "./dto/filter-cosecha.dto";
-import { UpdateCosechaDto } from "./dto/update-cosecha.dto";
+import { CosechaRepository } from "./cosecha.repository.js";
+import { CreateCosechaDto } from "./dto/create-cosecha.dto.js";
+import { FilterCosechaDto } from "./dto/filter-cosecha.dto.js";
+import { UpdateCosechaDto } from "./dto/update-cosecha.dto.js";
 
 @Injectable()
 export class CosechaService {
