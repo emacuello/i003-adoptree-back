@@ -1,7 +1,7 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { RoleEnum, User } from "@prisma/client";
-import { PrismaService } from "nestjs-prisma";
-import { UsersRepository } from "../users.repository"; // Ajusta la ruta según tu estructura de carpetas
+import { PrismaService } from "../../../prisma.service.js";
+import { UsersRepository } from "../users.repository.js"; // Ajusta la ruta según tu estructura de carpetas
 
 const mockPrismaService = {
   user: {

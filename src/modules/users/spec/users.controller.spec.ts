@@ -1,9 +1,9 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { RoleEnum } from "@prisma/client";
-import { UpdateUserDto } from "../../auth/dto/update-profile.dto";
-import { CreateUserDto } from "../dto/create-user.dto";
-import { UsersController } from "../users.controller";
-import { UsersService } from "../users.service";
+import { UpdateUserDto } from "../../auth/dto/update-profile.dto.js";
+import { CreateUserDto } from "../dto/create-user.dto.js";
+import { UsersController } from "../users.controller.js";
+import { UsersService } from "../users.service.js";
 
 const mockUsersService = {
   create: jest.fn(),

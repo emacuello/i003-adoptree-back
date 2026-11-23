@@ -1,11 +1,11 @@
 import { UnauthorizedException } from "@nestjs/common";
 import { JwtService } from "@nestjs/jwt";
 import { Test, TestingModule } from "@nestjs/testing";
-import { AuthController } from "../auth.controller";
-import { AuthService } from "../auth.service";
-import { LoginDto } from "../dto/login.dto";
-import { RegisterDto } from "../dto/register.dto";
-import { GoogleAuthService } from "../google-auth.service";
+import { AuthController } from "../auth.controller.js";
+import { AuthService } from "../auth.service.js";
+import { LoginDto } from "../dto/login.dto.js";
+import { RegisterDto } from "../dto/register.dto.js";
+import { GoogleAuthService } from "../google-auth.service.js";
 
 describe("AuthController", () => {
   let authController: AuthController;

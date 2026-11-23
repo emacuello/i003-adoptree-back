@@ -9,10 +9,10 @@ import {
   Query,
 } from "@nestjs/common";
 import { Arbol } from "@prisma/client";
-import { ArbolService } from "./arbol.service";
-import { CreateArbolDto } from "./dto/create-arbol.dto";
-import { ArbolFilterDto } from "./dto/filter-arbol.dto";
-import { UpdateArbolDto } from "./dto/update-arbol";
+import { ArbolService } from "./arbol.service.js";
+import { CreateArbolDto } from "./dto/create-arbol.dto.js";
+import { ArbolFilterDto } from "./dto/filter-arbol.dto.js";
+import { UpdateArbolDto } from "./dto/update-arbol.js";
 
 @Controller("arboles")
 export class ArbolController {

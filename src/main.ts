@@ -1,9 +1,9 @@
 // src/main.ts (o bootstrap.ts)
 import { ValidationPipe } from "@nestjs/common";
 import { NestFactory } from "@nestjs/core";
-import { PrismaService } from "nestjs-prisma";
-import { AppModule } from "./app.module";
-import { initializeSocket } from "./socket";
+import { PrismaService } from "./prisma.service.js";
+import { AppModule } from "./app.module.js";
+import { initializeSocket } from "./socket.js";
 
 // Exportamos la variable io
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -50,4 +50,4 @@ async function bootstrap() {
   });
 }
 
-bootstrap();
+void bootstrap();

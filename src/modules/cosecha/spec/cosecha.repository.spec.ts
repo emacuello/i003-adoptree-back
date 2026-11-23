@@ -1,8 +1,8 @@
 // src/modules/cosecha/spec/cosecha.repository.spec.ts
 import { Test, TestingModule } from "@nestjs/testing";
 import { EstadoDeEnvioEnum } from "@prisma/client";
-import { PrismaService } from "nestjs-prisma";
-import { CosechaRepository } from "../cosecha.repository";
+import { PrismaService } from "../../../prisma.service.js";
+import { CosechaRepository } from "../cosecha.repository.js";
 
 describe("CosechaRepository", () => {
   let cosechaRepository: CosechaRepository;

@@ -1,7 +1,7 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { Arbol, StatusTreeEnum } from "@prisma/client";
-import { PrismaService } from "nestjs-prisma";
-import { ArbolRepository } from "../arbol.repository";
+import { PrismaService } from "../../../prisma.service.js";
+import { ArbolRepository } from "../arbol.repository.js";
 
 const mockPrismaService = {
   arbol: {

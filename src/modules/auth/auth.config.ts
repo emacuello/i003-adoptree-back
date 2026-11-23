@@ -1,4 +1,4 @@
-import * as Joi from "joi";
+import Joi from "joi";
 import { registerAs } from "@nestjs/config";
 
 export const AUTH_CONFIG_KEY = "auth";

@@ -1,9 +1,9 @@
 import { Module } from "@nestjs/common";
-import { PrismaService } from "nestjs-prisma";
-import { FincaController } from "./finca.controller";
-import { FincaRepository } from "./finca.repository";
-import { FincaService } from "./finca.service";
-import { ProductorModule } from "../productor/productor.module";
+import { PrismaService } from "../../prisma.service.js";
+import { FincaController } from "./finca.controller.js";
+import { FincaRepository } from "./finca.repository.js";
+import { FincaService } from "./finca.service.js";
+import { ProductorModule } from "../productor/productor.module.js";
 
 @Module({
   imports: [ProductorModule],

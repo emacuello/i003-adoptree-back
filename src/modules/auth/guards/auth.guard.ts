@@ -8,10 +8,10 @@ import { Reflector } from "@nestjs/core";
 import { JwtService } from "@nestjs/jwt";
 import { RoleEnum } from "@prisma/client";
 import { Request } from "express";
-import { ERROR_KEYS } from "../../../constants";
-import COMMON_KEYS from "../../../constants/keys";
-import { getReqResFromCtx } from "../../../utils";
-import { AuthPayloadDTO } from "../dto/auth-payload.dto";
+import { ERROR_KEYS } from "../../../constants/index.js";
+import COMMON_KEYS from "../../../constants/keys.js";
+import { getReqResFromCtx } from "../../../utils/index.js";
+import { AuthPayloadDTO } from "../dto/auth-payload.dto.js";
 
 @Injectable()
 export default class AuthGuard implements CanActivate {

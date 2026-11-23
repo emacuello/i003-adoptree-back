@@ -1,10 +1,10 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { Arbol } from "@prisma/client";
-import { ERROR_KEYS } from "../../constants";
-import { ArbolRepository } from "./arbol.repository";
-import { CreateArbolDto } from "./dto/create-arbol.dto";
-import { ArbolFilterDto } from "./dto/filter-arbol.dto";
-import { UpdateArbolDto } from "./dto/update-arbol";
+import { ERROR_KEYS } from "../../constants/index.js";
+import { ArbolRepository } from "./arbol.repository.js";
+import { CreateArbolDto } from "./dto/create-arbol.dto.js";
+import { ArbolFilterDto } from "./dto/filter-arbol.dto.js";
+import { UpdateArbolDto } from "./dto/update-arbol.js";
 
 @Injectable()
 export class ArbolService {

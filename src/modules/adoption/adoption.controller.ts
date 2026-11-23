@@ -1,5 +1,5 @@
 import { Controller, Post, Body, Get, Param } from "@nestjs/common";
-import { AdoptionService } from "./adoption.service";
+import { AdoptionService } from "./adoption.service.js";
 import { Adoption } from "@prisma/client";
 
 @Controller("adoptions")

@@ -5,16 +5,17 @@ import {
   NotFoundException,
 } from "@nestjs/common";
 import { User } from "@prisma/client";
-import { UpdateUserDto } from "../auth/dto/update-profile.dto";
-import { PasswordService } from "../auth/password.service";
-import { CreateUserDto } from "./dto/create-user.dto";
-import { UsersRepository } from "./users.repository";
+import { UpdateUserDto } from "../auth/dto/update-profile.dto.js";
+import { PasswordService } from "../auth/password.service.js";
+import { CreateUserDto } from "./dto/create-user.dto.js";
+import { UsersRepository } from "./users.repository.js";
+import type { WrapperType } from "../../utils/index.js";
 
 @Injectable()
 export class UsersService {
   constructor(
     @Inject(forwardRef(() => PasswordService))
-    private readonly passwordService: PasswordService,
+    private readonly passwordService: WrapperType<PasswordService>,
     private readonly usersRepo: UsersRepository,
   ) {}
 

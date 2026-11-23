@@ -1,9 +1,9 @@
 import { Test, TestingModule } from "@nestjs/testing";
 import { Arbol } from "@prisma/client";
-import { ArbolController } from "../arbol.controller";
-import { ArbolService } from "../arbol.service";
-import { CreateArbolDto } from "../dto/create-arbol.dto";
-import { UpdateArbolDto } from "../dto/update-arbol";
+import { ArbolController } from "../arbol.controller.js";
+import { ArbolService } from "../arbol.service.js";
+import { CreateArbolDto } from "../dto/create-arbol.dto.js";
+import { UpdateArbolDto } from "../dto/update-arbol.js";
 
 describe("ArbolController", () => {
   let controller: ArbolController;

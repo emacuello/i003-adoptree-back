@@ -8,9 +8,9 @@ import {
   Put,
 } from "@nestjs/common";
 import { Finca } from "@prisma/client";
-import { CreateFincaDto } from "./dto/create-finca.dto";
-import { UpdateFincaDto } from "./dto/update-finca.dto";
-import { FincaService } from "./finca.service";
+import { CreateFincaDto } from "./dto/create-finca.dto.js";
+import { UpdateFincaDto } from "./dto/update-finca.dto.js";
+import { FincaService } from "./finca.service.js";
 
 @Controller("fincas")
 export class FincaController {

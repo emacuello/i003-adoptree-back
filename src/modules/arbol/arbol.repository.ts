@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { Arbol, Prisma, StatusTreeEnum } from "@prisma/client";
-import { PrismaService } from "nestjs-prisma";
+import { PrismaService } from "../../prisma.service.js";
 
 export type ArbolRepo = Prisma.ArbolGetPayload<{
   include: {

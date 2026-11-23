@@ -1,10 +1,10 @@
 import { Module } from "@nestjs/common";
 import { JwtModule } from "@nestjs/jwt";
-import { UsersModule } from "../users/users.module";
-import { AuthController } from "./auth.controller";
-import { AuthService } from "./auth.service";
-import { PasswordService } from "./password.service";
-import { GoogleAuthService } from "./google-auth.service";
+import { UsersModule } from "../users/users.module.js";
+import { AuthController } from "./auth.controller.js";
+import { AuthService } from "./auth.service.js";
+import { PasswordService } from "./password.service.js";
+import { GoogleAuthService } from "./google-auth.service.js";
 
 const authConfig = {
   google: {

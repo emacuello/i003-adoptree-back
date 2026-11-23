@@ -8,10 +8,10 @@ import {
   Put,
 } from "@nestjs/common";
 import { RoleEnum } from "@prisma/client";
-import { CheckRoles, GetAuthPayload } from "../auth/decorators";
-import { UpdateUserDto } from "../auth/dto/update-profile.dto";
-import { CreateUserDto } from "./dto/create-user.dto";
-import { UsersService } from "./users.service";
+import { CheckRoles, GetAuthPayload } from "../auth/decorators/index.js";
+import { UpdateUserDto } from "../auth/dto/update-profile.dto.js";
+import { CreateUserDto } from "./dto/create-user.dto.js";
+import { UsersService } from "./users.service.js";
 
 @Injectable()
 @Controller("users")

@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import * as mercadopago from "mercadopago";
-import { CreatePreferenceDto } from "./dto/create-preference.dto";
-import { ArbolRepository } from "../arbol/arbol.repository";
-import { io } from "../../main";
+import { CreatePreferenceDto } from "./dto/create-preference.dto.js";
+import { ArbolRepository } from "../arbol/arbol.repository.js";
+import { io } from "../../main.js";
 
 @Injectable()
 export class PaymentsService {

@@ -1,6 +1,6 @@
 import { Injectable } from "@nestjs/common";
 import { EstadoDeEnvioEnum, Prisma } from "@prisma/client";
-import { PrismaService } from "nestjs-prisma";
+import { PrismaService } from "../../prisma.service.js";
 
 export type CosechaRepo = Prisma.CosechaGetPayload<{
   include: {

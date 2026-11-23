@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
-import { CreateFincaDto } from "./dto/create-finca.dto";
-import { UpdateFincaDto } from "./dto/update-finca.dto";
-import { FincaRepository } from "./finca.repository";
-import { ProductorRepository } from "../productor/productor.repository";
+import { CreateFincaDto } from "./dto/create-finca.dto.js";
+import { UpdateFincaDto } from "./dto/update-finca.dto.js";
+import { FincaRepository } from "./finca.repository.js";
+import { ProductorRepository } from "../productor/productor.repository.js";
 
 @Injectable()
 export class FincaService {

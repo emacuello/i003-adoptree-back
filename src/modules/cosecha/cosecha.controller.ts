@@ -10,10 +10,10 @@ import {
   Query,
 } from "@nestjs/common";
 import { Cosecha } from "@prisma/client";
-import { CosechaService } from "./cosecha.service";
-import { CreateCosechaDto } from "./dto/create-cosecha.dto";
-import { FilterCosechaDto } from "./dto/filter-cosecha.dto";
-import { UpdateCosechaDto } from "./dto/update-cosecha.dto";
+import { CosechaService } from "./cosecha.service.js";
+import { CreateCosechaDto } from "./dto/create-cosecha.dto.js";
+import { FilterCosechaDto } from "./dto/filter-cosecha.dto.js";
+import { UpdateCosechaDto } from "./dto/update-cosecha.dto.js";
 
 @Controller("cosechas")
 export class CosechaController {
